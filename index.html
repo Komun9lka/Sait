@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile-info {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .profile-info h1 {
+            margin: 0;
+            color: #333;
+        }
+        .profile-info p {
+            color: #666;
+            font-size: 1.2em;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .hidden-list {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Портфолио</h1>
+    </header>
+
+    <div class="container">
+        <section class="profile-info">
+            <h1>Баталов Николай Алексеевич</h1>
+            <p>Прикладная информатика по отраслям</p>
+        </section>
+
+        <section class="button-container">
+            <button onclick="toggleWorkList()">Список работ</button>
+            <button onclick="toggleLawList()">Список законов</button>
+        </section>
+
+        <!-- Новый блок кнопок и списков -->
+        <section class="button-container">
+            <button onclick="toggleProjectList()">Практика и зачеты</button>
+            
+        </section>
+
+        <section id="work-list" class="hidden-list">
+            <h2>Список работ</h2>
+            <ul>
+ <body>
+
+    <h2>Список доступных PDF документов</h2>
+
+    <ul id="pdfList">
+        <!-- Ссылки на PDF файлы будут добавляться сюда -->
+    </ul>
+
+    <script>
+        // Папка, где хранятся PDF файлы
+        const folderPath = "Для сайта";
+
+        // Родительский элемент, куда будут добавляться ссылки
+        const pdfList = document.getElementById("pdfList");
+
+        // Цикл для добавления ссылок на файлы с номерами от 1 до 66
+        for (let i = 1; i <= 66; i++) {
+            const listItem = document.createElement("li");
+            const link = document.createElement("a");
+
+            link.href = folderPath + i + ".pdf";  // Путь к файлу с номером
+            link.target = "_blank";  // Открытие в новой вкладке
+            link.textContent = "Практическая работа № " + i;  // Текст ссылки
+
+            listItem.appendChild(link);
+            pdfList.appendChild(listItem);
+        }
+    </script>
+
+</body>
+            </ul>
+        </section>
+
+        <section id="law-list" class="hidden-list">
+            <h2>Список законов</h2>
+            <ul>
+               <body>
+
+    <ul>
+        <li><a href="https://s3510033.gosuslugi.ru/netcat_files/30/50/FZ_Ob_obrazovanii_v_RF_ot_01.09.2024.pdf" target="_blank">Федеральный закон об образовании в РФ от 01.09.2024</a></li>
+        <li><a href="https://rostrud.gov.ru/upload/Doc/Doc-rostrud/положение%20по%20государственной%20службе.pdf" target="_blank">Положение об отделе по вопросам гос.службы и кадров</a></li>
+        <li><a href="https://minobrnauki.gov.ru/upload/iblock/78b/gqtbnxzioc61lgse46ptq2p20xc6s31t.pdf" target="_blank">Положение об отделе нормативно-правового обеспечения образования</a></li>
+        <li><a href="https://eais.rkn.gov.ru/docs/149.pdf" target="_blank">РОССИЙСКАЯ ФЕДЕРАЦИЯ
+ФЕДЕРАЛЬНЫЙ ЗАКОН
+ОБ ИНФОРМАЦИИ, ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЯХ
+И О ЗАЩИТЕ ИНФОРМАЦИИ</a></li>
+        <li><a href="https://kigm.mskobr.ru/files/standart_090205_prikladnaya_informatika.pdf" target="_blank">Стандарт по прикладной информатике</a></li>
+        <li><a href="https://mpr.midural.ru/UPLOAD/2022/11/1_127-fz.pdf" target="_blank">Федеральный закон №127</a></li>
+        <li><a href="https://lyceum.urfu.ru/fileadmin/user_upload/docs/GOST_7.0.97-2016.pdf" target="_blank">ГОСТ 7.0.97-2016</a></li>
+    </ul>
+
+</body>
+            </ul>
+        </section>
+
+        <!-- Новые списки -->
+        <section id="project-list" class="hidden-list">
+            <h2>Практика и зачеты</h2>
+            <ul>
+                <body>
+
+    <ul>
+        <li><a href="Для сайта" target="_blank">Учебная практика 1</a></li>
+        <li><a href="Для сайта" target="_blank">Учебная практика 2</a></li>
+        <li><a href="Для сайта">Учебная практика 3</a></li>
+ <li><a href="Для сайта">Дневник по практике</a></li>
+
+        <!-- Добавьте дополнительные ссылки для других документов -->
+    </ul>
+
+</body>
+            </ul>
+        </section>
+
+        <section id="client-list" class="hidden-list">
+            <h2>Презентации</h2>
+            <ul>
+                <li>Клиент 1</li>
+                <li>Клиент 2</li>
+                <li>Клиент 3</li>
+                <li>Клиент 4</li>
+            </ul>
+        </section>
+
+        <section class="contact-info">
+            <h2>Контакты</h2>
+            <p><a href="mailto:Kolya.batalov.2001@mail.ru">kolya.batalov.2001@mail.ru</a></p>
+          
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Баталов Н.А.</p>
+    </footer>
+
+    <script>
+        function toggleWorkList() {
+            const workList = document.getElementById('work-list');
+            const lawList = document.getElementById('law-list');
+            const projectList = document.getElementById('project-list');
+            const clientList = document.getElementById('client-list');
+            
+            // Скрыть остальные списки
+            lawList.style.display = 'none';
+            projectList.style.display = 'none';
+            clientList.style.display = 'none';
+            
+            // Переключить отображение списка работ
+            if (workList.style.display === 'none' || workList.style.display === '') {
+                workList.style.display = 'block';
+            } else {
+                workList.style.display = 'none';
+            }
+        }
+
+        function toggleLawList() {
+            const workList = document.getElementById('work-list');
+            const lawList = document.getElementById('law-list');
+            const projectList = document.getElementById('project-list');
+            const clientList = document.getElementById('client-list');
+            
+            // Скрыть остальные списки
+            workList.style.display = 'none';
+            projectList.style.display = 'none';
+            clientList.style.display = 'none';
+            
+            // Переключить отображение списка законов
+            if (lawList.style.display === 'none' || lawList.style.display === '') {
+                lawList.style.display = 'block';
+            } else {
+                lawList.style.display = 'none';
+            }
+        }
+
+        function toggleProjectList() {
+            const workList = document.getElementById('work-list');
+            const lawList = document.getElementById('law-list');
+            const projectList = document.getElementById('project-list');
+            const clientList = document.getElementById('client-list');
+            
+            // Скрыть остальные списки
+            workList.style.display = 'none';
+            lawList.style.display = 'none';
+            clientList.style.display = 'none';
+            
+            // Переключить отображение списка проектов
+            if (projectList.style.display === 'none' || projectList.style.display === '') {
+                projectList.style.display = 'block';
+            } else {
+                projectList.style.display = 'none';
+            }
+        }
+
+        function toggleClientList() {
+            const workList = document.getElementById('work-list');
+            const lawList = document.getElementById('law-list');
+            const projectList = document.getElementById('project-list');
+            const clientList = document.getElementById('client-list');
+            
+            // Скрыть остальные списки
+            workList.style.display = 'none';
+            lawList.style.display = 'none';
+            projectList.style.display = 'none';
+            
+            // Переключить отображение списка клиентов
+            if (clientList.style.display === 'none' || clientList.style.display === '') {
+                clientList.style.display = 'block';
+            } else {
+                clientList.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
